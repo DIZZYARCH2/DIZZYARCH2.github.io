@@ -5,37 +5,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Zelaya | Portfolio</title>
     <style>
-        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f4f4f4; }
-        header { background: #004d99; color: #fff; padding: 2rem 0; text-align: center; }
-        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; }
-        .project-card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-        h1, h2, h3 { margin-bottom: 10px; }
+        /* Smooth scrolling for the whole page */
+        html { scroll-behavior: smooth; }
+        
+        /* Black and Red Theme */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            color: #e0e0e0; 
+            background-color: #0a0a0a; 
+        }
+        
+        /* Fixed Navigation Bar */
+        nav { 
+            background: #1a1a1a; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            border-bottom: 2px solid #d32f2f; 
+            z-index: 1000; 
+            display: flex; 
+            justify-content: center; 
+            padding: 1rem 0; 
+        }
+        nav a { 
+            color: #fff; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+            transition: color 0.3s; 
+        }
+        nav a:hover { color: #d32f2f; }
+        
+        /* Header & Profile Picture */
+        header { padding: 120px 20px 50px; text-align: center; }
+        .profile-pic { 
+            width: 220px; 
+            height: 220px; 
+            border-radius: 50%; 
+            border: 4px solid #d32f2f; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+        }
+        h1 { color: #fff; font-size: 2.8rem; margin-bottom: 5px; }
+        h1 span { color: #d32f2f; }
+        p.subtitle { font-size: 1.2rem; color: #a0a0a0; margin-top: 0; }
+        
+        /* Section Formatting */
+        .container { width: 80%; max-width: 900px; margin: auto; padding: 20px; }
+        section { 
+            padding-top: 100px; /* Accounts for the fixed nav bar when scrolling */
+            margin-top: -40px; 
+            margin-bottom: 60px;
+        }
+        h2 { color: #d32f2f; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 2rem; }
+        
+        /* Project Cards */
+        .card { 
+            background: #151515; 
+            padding: 25px; 
+            margin-bottom: 20px; 
+            border-left: 5px solid #d32f2f; 
+            border-radius: 4px; 
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        }
+        .card h3 { margin-top: 0; color: #fff; font-size: 1.4rem; }
+        ul li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Andrew Zelaya</h1>
-        <p>Electrical Engineering Student | Embedded Systems & Analog Circuit Design</p>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#additional">Additional</a>
+    </nav>
+
+    <header id="about">
+        <img src="headshot.jpeg" alt="Andrew Zelaya" class="profile-pic">
+        <h1>Andrew <span>Zelaya</span></h1>
+        <p class="subtitle">Electrical Engineering | Embedded Systems & Analog Circuit Design</p>
     </header>
 
     <div class="container">
-        <h2>About Me</h2>
-        <p>I am an Electrical Engineering student specializing in embedded programming (C++, Python) and hardware design. I love building practical systems, from cloud-connected microcontrollers to discrete analog circuits.</p>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="card">
+                <h3>University of Georgia</h3>
+                <p><strong>Major:</strong> Electrical Engineering</p>
+                <p>Focusing on electronic design, discrete components, and microcontroller programming. Actively engaging in collaborative laboratory environments to conceptualize and build physical electronic hardware.</p>
+            </div>
+        </section>
 
-        <h2>Featured Projects</h2>
+        <section id="projects">
+            <h2>Featured Projects</h2>
 
-        <div class="project-card">
-            <h3>Cloud-Connected Smart Voice Assistant</h3>
-            <p><strong>Tech Stack:</strong> C++, Python, Flask, SQLite, M5StickCPlus, Groq API (Whisper & Llama 3)</p>
-            <p>Engineered an end-to-end IoT system that captures I2S audio via an M5Stick, bypasses mobile hotspot DHCP drops with a static IP subnet, and transmits raw binary data to a Flask backend. Integrated GenAI to transcribe audio and automatically structure the data into a web-based to-do dashboard.</p>
-        </div>
+            <div class="card">
+                <h3>Cloud-Connected Smart Voice Assistant</h3>
+                <p><strong>Tech Stack:</strong> C++, Python, Flask, SQLite, M5StickCPlus, Groq API</p>
+                <p>Engineered an end-to-end IoT system capturing I2S audio via an M5Stick, utilizing a static IP subnet to bypass mobile hotspot DHCP drops. Transmitted raw binary data to a Flask backend where GenAI models (Whisper & Llama 3) transcribed and structured the audio into an automated web-based to-do dashboard.</p>
+            </div>
 
-        <div class="project-card">
-            <h3>Discrete Component Breadboard Synthesizer</h3>
-            <p><strong>Tech Stack:</strong> Analog Circuit Design, BJTs, MOSFETs, MIDI</p>
-            <p>Designed and built a hardware-based MIDI synthesizer on a breadboard using strictly discrete transistors, interfacing with an Arturia Keystep controller to shape and manipulate audio signals.</p>
-        </div>
+            <div class="card">
+                <h3>Discrete Component Breadboard Synthesizer</h3>
+                <p><strong>Tech Stack:</strong> Analog Circuit Design, BJTs, MOSFETs, MIDI</p>
+                <p>Designed and constructed a hardware-based MIDI synthesizer on a breadboard. Explicitly utilized discrete transistors (BJTs and MOSFETs) instead of integrated circuits, interfacing with an Arturia Keystep to control and shape the analog audio signals.</p>
+            </div>
 
+            <div class="card">
+                <h3>Digital Photo Frame</h3>
+                <p><strong>Tech Stack:</strong> C++, Python, M5Stick</p>
+                <p>Developed a digital photo frame system integrating Python scripts running via terminal to communicate with Arduino code, rendering images accurately on the M5Stick display.</p>
+            </div>
+        </section>
+
+        <section id="additional">
+            <h2>Additional Experience & Interests</h2>
+            <div class="card">
+                <h3>Extracurriculars & Hobbies</h3>
+                <ul>
+                    <li><strong>Organizations:</strong> Active member of IEEE UGA.</li>
+                    <li><strong>Athletics:</strong> Competitor on the University Frisbee team.</li>
+                    <li><strong>Music & Game Dev:</strong> Drummer with a sustained interest in music production. Currently researching independent game development workflows, including Unreal Engine and Steam publishing requirements for 2D boss fighters.</li>
+                </ul>
+            </div>
+        </section>
     </div>
+
 </body>
 </html>
