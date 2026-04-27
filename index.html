@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +18,7 @@
             background-color: #000000; 
         }
         
-        /* Fixed Navigation Bar (Moved back to the top) */
+        /* Fixed Navigation Bar */
         nav { 
             background: #111111; 
             position: fixed; 
@@ -30,14 +29,30 @@
             display: flex; 
             justify-content: center; 
             align-items: center;
-            padding: 1rem 0; 
+            /* Increased padding slightly to accommodate larger logo */
+            padding: 1.5rem 0; 
             box-shadow: 0 4px 10px rgba(0,0,0,0.8);
         }
+
+        /* UGA Logo: Made larger and circular */
         .uga-logo {
             position: absolute;
-            left: 20px;
-            height: 45px;
+            left: 30px; /* Pushed slightly more from the edge */
+            
+            /* SIZING */
+            height: 65px; /* Bumped from 45px */
+            width: 65px;  /* Set width to match height for perfect circle */
+            
+            /* THE CIRCLE CUT */
+            border-radius: 50%; /* Force circle shape */
+            object-fit: cover; /* Ensures image isn't stretched, cuts off edges */
+            
+            /* STYLING */
+            border: 2px solid #d32f2f; /* Matching red border */
+            background-color: #ffffff; /* White background within circle if PNG is transparent */
+            box-shadow: 0 0 10px rgba(211, 47, 47, 0.5); /* Subtle red glow */
         }
+
         nav a { 
             color: #ffffff; 
             text-decoration: none; 
@@ -50,7 +65,8 @@
         
         /* Header & Profile Picture */
         header { 
-            padding: 120px 20px 30px; /* Pushed down so the fixed nav doesn't cover it */
+            /* Pushed down further since nav bar is now taller */
+            padding: 160px 20px 30px; 
             text-align: center; 
             background-color: #000000; 
         }
@@ -81,7 +97,8 @@
         /* Section Formatting */
         .container { width: 80%; max-width: 900px; margin: auto; padding: 20px; }
         section { 
-            scroll-margin-top: 100px; 
+            /* Accounts for taller fixed nav bar */
+            scroll-margin-top: 130px; 
             margin-bottom: 60px;
         }
         h2 { color: #d32f2f; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 2rem; }
@@ -112,7 +129,7 @@
     </nav>
 
     <header>
-        <img src="headshot.jpg" alt="Andrew Zelaya" class="profile-pic">
+        <img src="profile.jpg" alt="Andrew Zelaya" class="profile-pic">
         <h1>Andrew <span>Zelaya</span></h1>
         <p class="subtitle">Electrical and Electronics Engineering | University of Georgia</p>
         
