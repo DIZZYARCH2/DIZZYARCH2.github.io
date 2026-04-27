@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andrew Zelaya | Portfolio</title>
     <style>
-        /* Smooth scrolling for the whole page */
+        /* Smooth scrolling */
         html { scroll-behavior: smooth; }
         
         /* Pure Black Background */
@@ -14,43 +14,16 @@
             line-height: 1.6; 
             margin: 0; 
             padding: 0; 
-            color: #ffffff; /* White text for anything outside the cards */
-            background-color: #000000; /* Pure black background */
+            color: #ffffff; 
+            background-color: #000000; 
         }
         
-        /* Header & Profile Picture */
-        header { padding: 60px 20px 30px; text-align: center; background-color: #000000; }
-        .profile-pic { 
-            width: 300px; 
-            height: 300px; 
-            border-radius: 50%; 
-            border: 5px solid #d32f2f; /* Georgia Red Border */
-            object-fit: cover; 
-            margin-bottom: 20px; 
-            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); 
-        }
-        h1 { color: #ffffff; font-size: 3rem; margin-bottom: 5px; margin-top: 0; }
-        h1 span { color: #d32f2f; }
-        p.subtitle { font-size: 1.3rem; color: #cccccc; margin-top: 0; margin-bottom: 10px; }
-        
-        /* Contact Links */
-        .contact-links { margin-bottom: 20px; }
-        .contact-links a { 
-            color: #d32f2f; 
-            text-decoration: none; 
-            font-weight: bold; 
-            margin: 0 15px; 
-            font-size: 1.1rem;
-        }
-        .contact-links a:hover { text-decoration: underline; }
-
-        /* Sticky Navigation Bar */
+        /* Fixed Navigation Bar (Back at the very top) */
         nav { 
             background: #111111; 
-            position: sticky; 
+            position: fixed; /* Moved back to fixed at top */
             top: 0; 
             width: 100%; 
-            border-top: 3px solid #d32f2f;
             border-bottom: 3px solid #d32f2f; 
             z-index: 1000; 
             display: flex; 
@@ -74,19 +47,48 @@
         }
         nav a:hover { color: #d32f2f; }
         
+        /* Header & Profile Picture */
+        header { 
+            padding: 120px 20px 30px; /* Increased top padding so fixed nav doesn't cover it */
+            text-align: center; 
+            background-color: #000000; 
+        }
+        .profile-pic { 
+            width: 300px; 
+            height: 300px; 
+            border-radius: 50%; 
+            border: 5px solid #d32f2f; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); 
+        }
+        h1 { color: #ffffff; font-size: 3rem; margin-bottom: 5px; margin-top: 0; }
+        h1 span { color: #d32f2f; }
+        p.subtitle { font-size: 1.3rem; color: #cccccc; margin-top: 0; margin-bottom: 10px; }
+        
+        /* Contact Links */
+        .contact-links { margin-bottom: 20px; }
+        .contact-links a { 
+            color: #d32f2f; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin: 0 15px; 
+            font-size: 1.1rem;
+        }
+        .contact-links a:hover { text-decoration: underline; }
+        
         /* Section Formatting */
         .container { width: 80%; max-width: 900px; margin: auto; padding: 20px; }
         section { 
             scroll-margin-top: 100px; 
             margin-bottom: 60px;
-            padding-top: 20px;
         }
         h2 { color: #d32f2f; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 2rem; }
         
         /* White Project Cards with Black Text */
         .card { 
-            background: #ffffff; /* White background */
-            color: #000000; /* Black text */
+            background: #ffffff; 
+            color: #000000; 
             padding: 25px; 
             margin-bottom: 20px; 
             border-left: 5px solid #d32f2f; 
@@ -94,11 +96,174 @@
             box-shadow: 0 6px 12px rgba(255,255,255,0.1);
         }
         .card h3 { margin-top: 0; color: #000000; font-size: 1.5rem; }
-        .card strong { color: #d32f2f; } /* Highlights tech stacks in red for contrast */
+        .card strong { color: #d32f2f; } 
         ul li { margin-bottom: 10px; }
     </style>
 </head>
 <body>
+
+    <nav>
+        <img src="uga.png" alt="UGA Logo" class="uga-logo">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#additional">Additional</a>
+    </nav>
+
+    <header>
+        <img src="profile.jpg" alt="Andrew Zelaya" class="profile-pic">
+        <h1>Andrew <span>Zelaya</span></h1>
+        
+        <p class="subtitle">Electrical and Electronics Engineering | University of Georgia</p>
+        
+        <div class="contact-links">
+            <a href="mailto:andrew.zelaya04@gmail.com">andrew.zelaya04@gmail.com</a>
+            <span style="color: #555;">|</span>
+            <a href="https://www.linkedin.com/in/andrew-zelaya-1001b134b" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="card">
+                <p>Electrical and Electronics Engineering student at UGA seeking opportunities to grow and develop skills in the electronics industry. Passionate about hands-on work in embedded systems and practical circuit applications, with a goal of gaining real-world experience and contributing to innovative projects.</p>
+            </div>
+        </section>
+
+        ```
+
+Wait, Master Rule Check:
+Did I use any user data without necessity? No, user explicitly asked for edits to their portfolio based on their previous queries.
+Are there implications or "Based on"? No.
+Is the checklist met? Yes.
+
+I need to explain to the user why the image broke:
+"GitHub Pages is strictly case-sensitive. If your file is named `Profile.jpg` or `profile.JPG`, but the code says `profile.jpg`, the website will break and not show it."
+
+Let's formulate the response.My apologies, let's get those exact layout details locked in. 
+
+I have moved the navigation tabs back to the very top of the screen where they belong. I also updated the **"About Me"** paragraph and the subtitle to explicitly say **"Electrical and Electronics Engineering"** verbatim. 
+
+### Why the Headshot Broke (The GitHub Rule)
+Unlike your computer, GitHub servers are **strictly case-sensitive**. 
+If your image file is uploaded as `Profile.jpg`, `profile.jpeg`, or `profile.PNG`, but the code says `profile.jpg`, the server will refuse to load it and show a broken image box. **You must ensure the filename on GitHub matches the code exactly, down to the lowercase letters.**
+
+### The Corrected Code
+Replace your entire file with this:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Zelaya | Portfolio</title>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        
+        /* Pure Black Background */
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            margin: 0; 
+            padding: 0; 
+            color: #ffffff; 
+            background-color: #000000; 
+        }
+        
+        /* Fixed Navigation Bar (Moved back to the top) */
+        nav { 
+            background: #111111; 
+            position: fixed; 
+            top: 0; 
+            width: 100%; 
+            border-bottom: 3px solid #d32f2f; 
+            z-index: 1000; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center;
+            padding: 1rem 0; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.8);
+        }
+        .uga-logo {
+            position: absolute;
+            left: 20px;
+            height: 45px;
+        }
+        nav a { 
+            color: #ffffff; 
+            text-decoration: none; 
+            margin: 0 20px; 
+            font-weight: bold; 
+            font-size: 1.1rem; 
+            transition: color 0.3s; 
+        }
+        nav a:hover { color: #d32f2f; }
+        
+        /* Header & Profile Picture */
+        header { 
+            padding: 120px 20px 30px; /* Pushed down so the fixed nav doesn't cover it */
+            text-align: center; 
+            background-color: #000000; 
+        }
+        .profile-pic { 
+            width: 300px; 
+            height: 300px; 
+            border-radius: 50%; 
+            border: 5px solid #d32f2f; 
+            object-fit: cover; 
+            margin-bottom: 20px; 
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.4); 
+        }
+        h1 { color: #ffffff; font-size: 3rem; margin-bottom: 5px; margin-top: 0; }
+        h1 span { color: #d32f2f; }
+        p.subtitle { font-size: 1.3rem; color: #cccccc; margin-top: 0; margin-bottom: 10px; }
+        
+        /* Contact Links */
+        .contact-links { margin-bottom: 20px; }
+        .contact-links a { 
+            color: #d32f2f; 
+            text-decoration: none; 
+            font-weight: bold; 
+            margin: 0 15px; 
+            font-size: 1.1rem;
+        }
+        .contact-links a:hover { text-decoration: underline; }
+        
+        /* Section Formatting */
+        .container { width: 80%; max-width: 900px; margin: auto; padding: 20px; }
+        section { 
+            scroll-margin-top: 100px; 
+            margin-bottom: 60px;
+        }
+        h2 { color: #d32f2f; border-bottom: 1px solid #333; padding-bottom: 10px; font-size: 2rem; }
+        
+        /* White Project Cards with Black Text */
+        .card { 
+            background: #ffffff; 
+            color: #000000; 
+            padding: 25px; 
+            margin-bottom: 20px; 
+            border-left: 5px solid #d32f2f; 
+            border-radius: 6px; 
+            box-shadow: 0 6px 12px rgba(255,255,255,0.1);
+        }
+        .card h3 { margin-top: 0; color: #000000; font-size: 1.5rem; }
+        .card strong { color: #d32f2f; } 
+        ul li { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <img src="uga.png" alt="UGA Logo" class="uga-logo">
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#additional">Additional</a>
+    </nav>
 
     <header>
         <img src="profile.jpg" alt="Andrew Zelaya" class="profile-pic">
@@ -112,19 +277,11 @@
         </div>
     </header>
 
-    <nav>
-        <img src="uga.png" alt="UGA Logo" class="uga-logo">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#additional">Additional</a>
-    </nav>
-
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
             <div class="card">
-                <p>Electrical Engineering student at UGA seeking opportunities to grow and develop skills in the electronics industry. Passionate about hands-on work in embedded systems and practical circuit applications, with a goal of gaining real-world experience and contributing to innovative projects.</p>
+                <p>Electrical and Electronics Engineering student at UGA seeking opportunities to grow and develop skills in the electronics industry. Passionate about hands-on work in embedded systems and practical circuit applications, with a goal of gaining real-world experience and contributing to innovative projects.</p>
             </div>
         </section>
 
