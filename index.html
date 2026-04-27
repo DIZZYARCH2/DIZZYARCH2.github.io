@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Zelaya | Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #333; background-color: #f4f4f4; }
+        header { background: #004d99; color: #fff; padding: 2rem 0; text-align: center; }
+        .container { width: 80%; margin: auto; overflow: hidden; padding: 20px; }
+        .project-card { background: #fff; padding: 20px; margin-bottom: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h1, h2, h3 { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Andrew Zelaya</h1>
+        <p>Electrical Engineering Student | Embedded Systems & Analog Circuit Design</p>
+    </header>
 
+    <div class="container">
+        <h2>About Me</h2>
+        <p>I am an Electrical Engineering student specializing in embedded programming (C++, Python) and hardware design. I love building practical systems, from cloud-connected microcontrollers to discrete analog circuits.</p>
+
+        <h2>Featured Projects</h2>
+
+        <div class="project-card">
+            <h3>Cloud-Connected Smart Voice Assistant</h3>
+            <p><strong>Tech Stack:</strong> C++, Python, Flask, SQLite, M5StickCPlus, Groq API (Whisper & Llama 3)</p>
+            <p>Engineered an end-to-end IoT system that captures I2S audio via an M5Stick, bypasses mobile hotspot DHCP drops with a static IP subnet, and transmits raw binary data to a Flask backend. Integrated GenAI to transcribe audio and automatically structure the data into a web-based to-do dashboard.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>Discrete Component Breadboard Synthesizer</h3>
+            <p><strong>Tech Stack:</strong> Analog Circuit Design, BJTs, MOSFETs, MIDI</p>
+            <p>Designed and built a hardware-based MIDI synthesizer on a breadboard using strictly discrete transistors, interfacing with an Arturia Keystep controller to shape and manipulate audio signals.</p>
+        </div>
+
+    </div>
+</body>
+</html>
